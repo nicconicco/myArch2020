@@ -31,12 +31,12 @@ class InvViewModel(private val invRepository: InvRepository) : ViewModel() {
     private fun loadList() {
         viewModelScope.launch {
             _actionView.value = InvViewAction.InvLoading(true)
-                val result = invRepository.getListInvModel()
-                when (result) {
-                    is ResultWrapper.NetworkError -> showNetworkError()
-                    is ResultWrapper.GenericError -> result.error?.let { showGenericError(it) }
-                    is ResultWrapper.Success -> showSuccess(result.value)
-                }
+            val result = invRepository.getListInvModel()
+            when (result) {
+                is ResultWrapper.NetworkError -> showNetworkError()
+                is ResultWrapper.GenericError -> result.error?.let { showGenericError(it) }
+                is ResultWrapper.Success -> showSuccess(result.value)
+            }
         }
     }
 

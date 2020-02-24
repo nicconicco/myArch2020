@@ -93,7 +93,8 @@ dependencies {
     implementation(RetrofitLibraies.gson)
     implementation(RetrofitLibraies.moshi)
 
-    implementation(LottieLibrarie.lottie)
+    implementation(LottieLibraries.lottie)
+    implementation(MockkLibraries.mockk)
 }
 
 
