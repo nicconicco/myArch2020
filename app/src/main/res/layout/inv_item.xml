@@ -10,65 +10,86 @@
     android:layout_marginRight="20dp"
     android:foreground="?attr/selectableItemBackground">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/shape_button_menu"
-        android:orientation="vertical">
+        android:layout_height="125dp">
 
-        <TextView
-            android:id="@+id/tvTitle"
-            style="@style/Base.TextAppearance.AppCompat.Medium"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_light"
-            android:textColor="@android:color/white"
-            tools:text="Title to post" />
-
-        <TextView
-            android:id="@+id/tvBody"
-            style="@style/TextAppearance.AppCompat.Small"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/def_small_margin"
-            android:fontFamily="@font/roboto_light"
-            android:maxLines="2"
-            android:textColor="@android:color/white"
-            tools:text="Body to post" />
-
-        <RelativeLayout
-            android:id="@+id/rlUserDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/def_small_margin">
-
-            <ImageView
-                android:id="@+id/ivAvatar"
-                android:layout_width="@dimen/def_small_avatar_size"
-                android:layout_height="@dimen/def_small_avatar_size"
-                android:contentDescription="@string/user_image"
-                android:src="@drawable/itau"
-                android:scaleType="centerCrop"
-                tools:background="@drawable/itau" />
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_button_menu"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvAuthorName"
-                style="@style/Base.TextAppearance.AppCompat.Caption"
+                android:id="@+id/tvTitle"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/ivAvatar"
-                android:padding="@dimen/card_padding"
+                android:fontFamily="@font/roboto_light"
                 android:textColor="@android:color/white"
-                android:text="Itau, feito para voce." />
+                android:textStyle="bold"
+                tools:text="Title to post" />
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/tvBody"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/def_small_margin"
+                android:fontFamily="@font/roboto_light"
+                android:maxLines="2"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:text="Body to post" />
 
-        <TextView
-            android:id="@+id/tvKnowMore"
-            style="@style/actionable_text"
-            android:text="@string/know_more" />
+            <RelativeLayout
+                android:id="@+id/rlUserDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/def_small_margin">
 
-    </LinearLayout>
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="@dimen/def_small_avatar_size"
+                    android:layout_height="@dimen/def_small_avatar_size"
+                    android:contentDescription="@string/user_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/itau"
+                    tools:background="@drawable/itau" />
+
+                <TextView
+                    android:id="@+id/tvAuthorName"
+                    style="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivAvatar"
+                    android:padding="@dimen/card_padding"
+                    android:text="Itau, feito para voce."
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvKnowMore"
+                style="@style/actionable_text"
+                android:text="@string/know_more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/ivAvatar2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/itau" />
+        </LinearLayout>
+    </RelativeLayout>
+
 
 </LinearLayout>

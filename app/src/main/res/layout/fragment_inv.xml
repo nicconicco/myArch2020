@@ -15,6 +15,7 @@
             android:background="@android:color/white" />
 
         <TextView
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -65,6 +66,7 @@
             android:background="@android:color/white" />
 
         <TextView
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -73,7 +75,7 @@
             android:fontFamily="@font/roboto_medium"
             android:text="@string/inv_mais_opcoes"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <View
             android:layout_width="match_parent"
