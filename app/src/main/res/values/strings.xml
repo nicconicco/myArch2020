@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyArchExample</string>
+    <string name="user_image">User Image</string>
+    <string name="know_more">Know more</string>
+    <string name="inv_renda_fixa">Renda Fixa</string>
+    <string name="inv_renda_variada">Renda Variavel</string>
+</resources>

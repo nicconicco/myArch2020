@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="def_small_margin">4dp</dimen>
+    <dimen name="card_padding">4dp</dimen>
+    <dimen name="def_small_avatar_size">24dp</dimen>
+
+    <dimen name="pageMargin">5dp</dimen>
+    <dimen name="offset">10dp</dimen>
+    <dimen name="pageMarginAndOffset">15dp</dimen>
+</resources>
