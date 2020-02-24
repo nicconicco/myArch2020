@@ -92,6 +92,8 @@ dependencies {
     implementation(RetrofitLibraies.retrofitCoroutine)
     implementation(RetrofitLibraies.gson)
     implementation(RetrofitLibraies.moshi)
+
+    implementation(LottieLibrarie.lottie)
 }
 
 

@@ -18,6 +18,7 @@ import com.nicco.myarchexample.presentation.view.adapter.CategoryDiffUtilAdapter
 import com.nicco.myarchexample.presentation.view.adapter.InvListAdapter
 import com.nicco.myarchexample.presentation.viewmodel.InvViewAction
 import com.nicco.myarchexample.presentation.viewmodel.InvViewModel
+import kotlinx.android.synthetic.main.fragment_inv.*
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
@@ -110,7 +111,11 @@ class InvFragment : Fragment(),
         invViewModel.actionView.observe(viewLifecycleOwner) { state ->
             when (state) {
                 is InvViewAction.InvLoading -> {
-
+                    if(state.loading) {
+                        progress.visibility = View.VISIBLE
+                    } else {
+                        progress.visibility = View.GONE
+                    }
                 }
                 is InvViewAction.InvSuccess -> {
                     invListAdapter.swapData(state.itens)

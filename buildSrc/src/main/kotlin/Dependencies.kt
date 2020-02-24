@@ -67,6 +67,14 @@ object TestLibraries {
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
 }
 
+object LottieLibrarie {
+    private object Versions {
+        const val lottie = "3.4.0"
+    }
+
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
+}
+
 object KoinLibraies {
     private object Versions {
         const val koin = "2.0.1"

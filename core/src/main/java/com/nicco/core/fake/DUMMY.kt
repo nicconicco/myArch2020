@@ -10,7 +10,7 @@ object DUMMY {
     }
 
     private fun makeInvResponse(
-        count: Int = 100
+        count: Int = 15
     ): InvResponse = InvResponse(
         uid = Random().toString(),
         responseCode = Random().toString(),
