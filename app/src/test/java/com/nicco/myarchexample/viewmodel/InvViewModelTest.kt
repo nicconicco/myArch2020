@@ -1,14 +1,12 @@
 package com.nicco.myarchexample.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.lifecycle.Observer
 import com.nicco.core.fake.DUMMY
 import com.nicco.core.network.ErrorResponse
 import com.nicco.core.network.ResultWrapper
 import com.nicco.core.response.InvResponse
 import com.nicco.myarchexample.CoroutineTestRule
 import com.nicco.myarchexample.data.repository.InvRepository
-import com.nicco.myarchexample.presentation.model.InvModel
 import com.nicco.myarchexample.presentation.viewmodel.InvViewAction
 import com.nicco.myarchexample.presentation.viewmodel.InvViewModel
 import io.mockk.coEvery
@@ -19,8 +17,6 @@ import org.junit.Rule
 import org.junit.Test
 
 class InvViewModelTest {
-
-    private val list: List<InvModel> = mockk()
 
     @get:Rule
     val instantTask = InstantTaskExecutorRule()
@@ -39,7 +35,6 @@ class InvViewModelTest {
         viewModel = InvViewModel(repository)
 
         coVerify { repository.getListInvModel() }
-
         assert(viewModel.actionView.value is InvViewAction.InvSuccess)
     }
 
