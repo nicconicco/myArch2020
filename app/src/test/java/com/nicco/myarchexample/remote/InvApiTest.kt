@@ -64,7 +64,7 @@ class InvApiTest {
     fun getPosts()  = runBlocking  {
         queueResponse {
             setResponseCode(200)
-            setBody(JSON)
+            setBody(DependencyProvider.getResponseFromJson("posts"))
         }
 
         withContext(Dispatchers.IO) {

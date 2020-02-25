@@ -39,12 +39,12 @@ object DependencyProvider {
      */
     @SuppressLint("NewApi")
     fun getResponseFromJson(fileName: String): String {
-//        val inputStream = javaClass.classLoader?.getResourceAsStream("api-response/$fileName.json")
-//
-//        inputStream?.let {
-//            val source = Okio.buffer(Okio.source(inputStream))
-//            return source.readString(StandardCharsets.UTF_8)
-//        }
+        val inputStream = javaClass.classLoader?.getResourceAsStream("api-response/$fileName.json")
+
+        inputStream?.let {
+            val source = Okio.buffer(Okio.source(inputStream))
+            return source.readString(StandardCharsets.UTF_8)
+        }
 
         return "[\n" +
                 "  {\n" +
