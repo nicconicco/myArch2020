@@ -70,10 +70,15 @@ class InvApiTest {
         withContext(Dispatchers.IO) {
             try {
                 val response = apiService.getInvList()
-                //todo: Checar object
+
                 assert(response != null)
+                assert(response.uid != null)
+                assert(response.responseCode != null)
+                assert(response.data != null)
+                assert(response.status != null)
+
                 coVerify { apiService.getInvList() }
-            }catch (e: Exception) {
+            } catch (e: Exception) {
                 assert(e != null)
             }
         }
