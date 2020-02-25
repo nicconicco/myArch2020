@@ -18,7 +18,7 @@ object BuildPlugins {
 
 object AndroidSdk {
     const val min = 26
-    const val compile = 29
+    const val compile = 28
     const val version = "29.0.2"
     const val target = compile
 }
@@ -94,6 +94,22 @@ object KoinLibraies {
     const val koinAndroiViewModel = "org.koin:koin-android-viewmodel:${Versions.koin}"
     const val koinTest = "org.koin:koin-test:${Versions.koin}"
     const val koinTestRules = "androidx.test:rules:${Versions.koinTest}"
+}
+
+object RoboletricLibraries {
+    private object Versions {
+        const val roboletric = "4.2"
+    }
+
+    const val roboletric = "org.robolectric:robolectric:${Versions.roboletric}"
+}
+
+object MockWebServerLibraries {
+    private object Versions {
+        const val mockwebserver = "3.9.0"
+    }
+
+    const val mockwebserver = "com.squareup.okhttp3:mockwebserver:${Versions.mockwebserver}"
 }
 
 object CoroutinesLibraies {

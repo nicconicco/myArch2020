@@ -95,6 +95,9 @@ dependencies {
 
     implementation(LottieLibraries.lottie)
     implementation(MockkLibraries.mockk)
+
+    implementation(RoboletricLibraries.roboletric)
+    implementation(MockWebServerLibraries.mockwebserver)
 }
 
 

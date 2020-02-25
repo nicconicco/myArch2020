@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.appCompat)
     implementation(Libraries.ktxCore)

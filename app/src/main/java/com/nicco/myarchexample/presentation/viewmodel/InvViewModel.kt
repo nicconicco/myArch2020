@@ -54,8 +54,4 @@ class InvViewModel(private val invRepository: InvRepository) : ViewModel() {
         _actionView.value = InvViewAction.InvLoading(false)
         _actionView.value = InvViewAction.InvError("NETWORK ERROR")
     }
-
-    fun fetchList() {
-        loadList()
-    }
 }

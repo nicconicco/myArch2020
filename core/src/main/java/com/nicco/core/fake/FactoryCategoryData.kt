@@ -1,6 +1,6 @@
 package com.nicco.core.fake
 
-object DummyCategoryData {
+object FactoryCategoryData {
     val categories: List<Category>
         get() {
             val categories = mutableListOf<Category>()

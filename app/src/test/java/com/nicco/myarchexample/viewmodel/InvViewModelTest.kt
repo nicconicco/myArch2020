@@ -1,7 +1,7 @@
 package com.nicco.myarchexample.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.nicco.core.fake.DUMMY
+import com.nicco.core.fake.FactoryInvResponse
 import com.nicco.core.network.ErrorResponse
 import com.nicco.core.network.ResultWrapper
 import com.nicco.core.response.InvResponse
@@ -29,7 +29,7 @@ class InvViewModelTest {
 
     @Test
     fun `When  viewmodel call, return Success state`() = runBlockingTest {
-        val response : InvResponse = DUMMY.dummyInvResponse()
+        val response : InvResponse = FactoryInvResponse.dummyInvResponse()
         val responseOk: ResultWrapper<InvResponse> = ResultWrapper.Success(response)
 
         coEvery() { repository.getListInvModel() } returns responseOk

@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.observe
-import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import com.nicco.core.fake.DummyCategoryData.categories
+import com.nicco.core.fake.FactoryCategoryData.categories
 import com.nicco.myarchexample.R
 import com.nicco.myarchexample.databinding.FragmentInvBinding
 import com.nicco.myarchexample.di.*

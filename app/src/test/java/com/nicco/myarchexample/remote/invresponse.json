@@ -1,0 +1,16 @@
+{
+  "uid": "1234",
+  "responseCode": "200",
+  "data": [
+    {
+      "uid": "1234",
+      "status": "1234",
+      "hashCode": "1234",
+      "title": "Teste",
+      "description": "Teste description",
+      "price": 20.0,
+      "percent": 20.0
+    }
+  ],
+  "status": "OK"
+}

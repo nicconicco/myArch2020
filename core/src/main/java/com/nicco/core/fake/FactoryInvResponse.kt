@@ -4,7 +4,7 @@ import com.nicco.core.response.InvData
 import com.nicco.core.response.InvResponse
 import java.util.*
 
-object DUMMY {
+object FactoryInvResponse {
     fun dummyInvResponse(): InvResponse {
         return makeInvResponse()
     }

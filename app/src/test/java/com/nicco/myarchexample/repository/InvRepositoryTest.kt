@@ -1,7 +1,7 @@
 package com.nicco.myarchexample.repository
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.nicco.core.fake.DUMMY
+import com.nicco.core.fake.FactoryInvResponse
 import com.nicco.myarchexample.CoroutineTestRule
 import com.nicco.myarchexample.data.datasource.InvDataSource
 import com.nicco.myarchexample.data.repository.InvRepository
@@ -28,7 +28,7 @@ class InvRepositoryTest {
 
     @Test
     fun `When repository call, should call dataSource fetchListInv`() = runBlockingTest {
-        val response = DUMMY.dummyInvResponse()
+        val response = FactoryInvResponse.dummyInvResponse()
         coEvery() { dataSource.fetchListInv() } returns response
 
         repository = InvRepositoryImp(dataSource, dispatcher)
