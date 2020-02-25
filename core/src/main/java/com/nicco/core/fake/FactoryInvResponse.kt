@@ -18,7 +18,7 @@ object FactoryInvResponse {
         status = Random().toString()
     )
 
-    private fun makeInvData(qtd: Int): List<InvData> {
+    fun makeInvData(qtd: Int): List<InvData> {
         val list: MutableList<InvData> = mutableListOf()
         var i = 1
         while(i<qtd) {

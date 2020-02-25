@@ -8,7 +8,6 @@ import io.mockk.coVerify
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.withContext
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -18,22 +17,6 @@ import org.robolectric.RobolectricTestRunner
 import java.io.IOException
 import java.lang.Exception
 
-const val JSON = "{\n" +
-        "  \"uid\": \"1234\",\n" +
-        "  \"responseCode\": \"200\",\n" +
-        "  \"data\": [\n" +
-        "    {\n" +
-        "      \"uid\": \"1234\",\n" +
-        "      \"status\": \"1234\",\n" +
-        "      \"hashCode\": \"1234\",\n" +
-        "      \"title\": \"Teste\",\n" +
-        "      \"description\": \"Teste description\",\n" +
-        "      \"price\": 20.0,\n" +
-        "      \"percent\": 20.0\n" +
-        "    }\n" +
-        "  ],\n" +
-        "  \"status\": \"OK\"\n" +
-        "}"
 @RunWith(RobolectricTestRunner::class)
 class InvApiTest {
 

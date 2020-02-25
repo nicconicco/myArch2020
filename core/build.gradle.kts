@@ -56,4 +56,7 @@ dependencies {
     androidTestImplementation (KoinLibraies.koinTest)
     testImplementation (KoinLibraies.koinTest)
     androidTestImplementation (KoinLibraies.koinTestRules)
+
+    implementation(MockkLibraries.mockk)
+    implementation(MockWebServerLibraries.mockwebserver)
 }
