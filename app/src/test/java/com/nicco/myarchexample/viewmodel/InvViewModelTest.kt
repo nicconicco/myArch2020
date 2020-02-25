@@ -18,7 +18,6 @@ import org.junit.Test
 
 class InvViewModelTest {
 
-    private val listener: InvViewAction = InvViewAction.InvLoading(false)
     @get:Rule
     val instantTask = InstantTaskExecutorRule()
     @get:Rule

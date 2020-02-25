@@ -6,5 +6,5 @@ import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
 
 val invRepositoryModule = module {
-    single<InvRepository> { InvRepositoryImp(get(), Dispatchers.IO) }
+    single<InvRepository> { InvRepositoryImp(get(), get()) }
 }

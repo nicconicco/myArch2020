@@ -5,8 +5,6 @@ import org.koin.dsl.module
 
 val invAdapterModule = module {
     single {
-        invListAdapter()
+        InvListAdapter()
     }
 }
-
-fun invListAdapter(): InvListAdapter = InvListAdapter()

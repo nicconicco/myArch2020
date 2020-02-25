@@ -8,11 +8,11 @@ import kotlinx.coroutines.delay
 
 class InvDataSourceImp(private val api: InvApi) : InvDataSource {
     override suspend fun fetchListInv(): InvResponse {
-        if (BuildConfig.DEBUG) {
-            delay(3000)
-            return FactoryInvResponse.dummyInvResponse()
-        } else {
+//        if (BuildConfig.DEBUG) {
+//            delay(3000)
+//            return FactoryInvResponse.dummyInvResponse()
+//        } else {
             return api.getInvList()
-        }
+//        }
     }
 }
