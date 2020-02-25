@@ -18,6 +18,7 @@ import org.junit.Test
 
 class InvViewModelTest {
 
+    private val listener: InvViewAction = InvViewAction.InvLoading(false)
     @get:Rule
     val instantTask = InstantTaskExecutorRule()
     @get:Rule
@@ -32,8 +33,10 @@ class InvViewModelTest {
         val responseOk: ResultWrapper<InvResponse> = ResultWrapper.Success(response)
 
         coEvery() { repository.getListInvModel() } returns responseOk
+
         viewModel = InvViewModel(repository)
 
+        assert(viewModel.actionView.value != null)
         coVerify { repository.getListInvModel() }
         assert(viewModel.actionView.value is InvViewAction.InvSuccess)
     }
@@ -45,6 +48,7 @@ class InvViewModelTest {
 
         viewModel = InvViewModel(repository)
 
+        assert(viewModel.actionView.value != null)
         coVerify { repository.getListInvModel() }
         assert(viewModel.actionView.value is InvViewAction.InvError)
     }
@@ -56,6 +60,7 @@ class InvViewModelTest {
 
         viewModel = InvViewModel(repository)
 
+        assert(viewModel.actionView.value != null)
         coVerify { repository.getListInvModel() }
         assert(viewModel.actionView.value is InvViewAction.InvError)
     }
