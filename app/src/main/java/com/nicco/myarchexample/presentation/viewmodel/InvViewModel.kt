@@ -1,15 +1,19 @@
 package com.nicco.myarchexample.presentation.viewmodel
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.nicco.core.CoreApp
+import com.nicco.core.base.BaseViewModel
 import com.nicco.core.network.ErrorResponse
 import com.nicco.core.network.ResultWrapper
+import com.nicco.core.response.InvResponse
+import com.nicco.core.util.Callback
+import com.nicco.core.util.SingleLiveEvent
 import com.nicco.myarchexample.data.repository.InvRepository
 import com.nicco.myarchexample.data.repository.map.InvMap
-import com.nicco.core.response.InvResponse
 import com.nicco.myarchexample.presentation.model.InvModel
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 sealed class InvViewAction {
@@ -18,9 +22,14 @@ sealed class InvViewAction {
     open class InvLoading(val loading: Boolean) : InvViewAction()
 }
 
-class InvViewModel(private val invRepository: InvRepository) : ViewModel() {
+class InvViewModel(
+    private val invRepository: InvRepository,
+    app: CoreApp,
+    mainDispacher: CoroutineDispatcher,
+    ioDispacher: CoroutineDispatcher
+) : BaseViewModel(app, mainDispacher, ioDispacher) {
 
-    private val _actionView = MediatorLiveData<InvViewAction>()
+    private val _actionView = SingleLiveEvent<InvViewAction>()
     val actionView: LiveData<InvViewAction>
         get() = _actionView
 
@@ -37,6 +46,24 @@ class InvViewModel(private val invRepository: InvRepository) : ViewModel() {
                 is ResultWrapper.GenericError -> result.error?.let { showGenericError(it) }
                 is ResultWrapper.Success -> showSuccess(result.value)
             }
+        }
+    }
+
+    private fun loadAnotherList() {
+        uiScope.launch {
+            ioScope.async {
+                return@async invRepository.getAnotherList(
+                    object : Callback<InvResponse, String>() {
+                        override fun onSuccess(response: InvResponse) {
+                            showSuccess(response)
+                        }
+
+                        override fun onError(error: String) {
+                            super.onError(error)
+                            showNetworkError()
+                        }
+                    })
+            }.await()
         }
     }
 

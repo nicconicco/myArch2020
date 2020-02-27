@@ -15,6 +15,21 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    packagingOptions {
+        exclude ("META-INF/gradle/incremental.annotation.processors")
+        exclude ("META-INF/gradle/incremental.annotation.processors")
+        exclude ("META-INF/DEPENDENCIES")
+        exclude ("META-INF/LICENSE")
+        exclude ("META-INF/LICENSE.txt")
+        exclude ("META-INF/license.txt")
+        exclude ("META-INF/NOTICE")
+        exclude ("META-INF/NOTICE.txt")
+        exclude ("META-INF/notice.txt")
+        exclude ("META-INF/ASL2.0")
+        exclude("META-INF/*.kotlin_module")
+    }
+
     buildTypes {
         getByName("debug") {
             isMinifyEnabled = false
@@ -59,4 +74,8 @@ dependencies {
 
     implementation(MockkLibraries.mockk)
     implementation(MockWebServerLibraries.mockwebserver)
+
+    implementation(CoroutinesLibraies.coroutinesAndroid)
+    implementation(CoroutinesLibraies.coroutinesCore)
+    implementation(CoroutinesLibraies.coroutinesTest)
 }

@@ -1,4 +1,4 @@
-package com.nicco.myarchexample
+package com.nicco.core.testing
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

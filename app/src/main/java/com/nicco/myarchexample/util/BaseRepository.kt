@@ -1,4 +1,4 @@
-package com.nicco.myarchexample.business
+package com.nicco.myarchexample.util
 
 import com.nicco.core.network.ErrorResponse
 import com.nicco.core.network.ResultWrapper

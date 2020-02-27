@@ -102,6 +102,7 @@ object RoboletricLibraries {
     }
 
     const val roboletric = "org.robolectric:robolectric:${Versions.roboletric}"
+    const val annotation = "org.robolectric:annotations:${Versions.roboletric}"
 }
 
 object MockWebServerLibraries {

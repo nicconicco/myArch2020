@@ -2,7 +2,7 @@ package com.nicco.myarchexample.repository
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.nicco.core.fake.FactoryInvResponse
-import com.nicco.myarchexample.CoroutineTestRule
+import com.nicco.core.testing.CoroutineTestRule
 import com.nicco.myarchexample.data.datasource.InvDataSource
 import com.nicco.myarchexample.data.repository.InvRepository
 import com.nicco.myarchexample.data.repository.InvRepositoryImp

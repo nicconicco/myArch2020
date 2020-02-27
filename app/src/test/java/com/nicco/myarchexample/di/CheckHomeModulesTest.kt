@@ -1,6 +1,6 @@
 package com.nicco.myarchexample.di
 
-import com.nicco.myarchexample.CoroutineTestRule
+import com.nicco.core.testing.CoroutineTestRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.test.runBlockingTest

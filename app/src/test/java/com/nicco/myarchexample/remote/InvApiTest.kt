@@ -2,7 +2,7 @@ package com.nicco.myarchexample.remote
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.nicco.core.testing.DependencyProvider
-import com.nicco.myarchexample.CoroutineTestRule
+import com.nicco.core.testing.CoroutineTestRule
 import com.nicco.myarchexample.data.retrofit.InvApi
 import io.mockk.coVerify
 import kotlinx.coroutines.Dispatchers
@@ -12,12 +12,9 @@ import kotlinx.coroutines.withContext
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.*
-import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
 import java.io.IOException
 import java.lang.Exception
 
-@RunWith(RobolectricTestRunner::class)
 class InvApiTest {
 
     @get:Rule
