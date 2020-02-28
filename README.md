@@ -29,7 +29,7 @@ Tecnologias envolvidas:
 19 - ModelUI - ModelResponse - ModelEntity\
 20 - Factory for unit tests\
 21 - Font ( Roboto )\
-22 - Mockk]
+22 - Mockk\
 23 - mockito ( WIP )
 
 ---------------------------------------------------------------------------------------------------------------------------
