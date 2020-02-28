@@ -2,7 +2,7 @@
 
 ### Minha arquitetura de 2020.
 
-![Arch](https://user-images.githubusercontent.com/6299673/75498386-c94d8c80-59a5-11ea-8806-5ca597b37b66.png)
+![Arch](https://user-images.githubusercontent.com/6299673/75498603-5a246800-59a6-11ea-995e-eecab1149005.png)
 
 ---------------------------------------------------------------------------------------------------------------------------
 
